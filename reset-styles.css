@@ -1,0 +1,40 @@
+/* resets the default margin and padding values of all HTML elements */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Responsive base font-size */
+/* Applies to all screens, but it is overriden for larger screens */
+:root {
+  font-size: 0.75em;
+}
+
+/* Applies only to screens 800 px and wider, overriding the original value */
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875em; /* Applies only to screens 800 px and wider, overriding the original value */
+  }
+}
+/* Applies only to screens 1,200 px and larger, overriding both values */
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1em; /* Applies only to screens 1200 px and larger, overriding the original value */
+  }
+}
+
+/* Applies border box sizing to the root element */
+:root {
+  box-sizing: border-box;
+}
+/* Tells all other elements and pseudo-elements to inherit their box sizing */
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* to convert a third-party component into a content-box when necessary by targeting its top-level container. Then all elements inside the component will inherit the box sizing */
+.third-party-component {
+  box-sizing: content-box;
+}
